@@ -44,15 +44,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             // Do the initial de-serialization
             
             let json = try NSJSONSerialization.JSONObjectWithData(theData, options: NSJSONReadingOptions.AllowFragments) as! AnyObject
+//            
+//            // Print retrieved JSON
+//            print("")
+//            print("====== the retrieved JSON is as follows ======")
+//            print(json)
+//            
+//            // Now we can parse this...
+//            print("")
+//            print("Now, add your parsing code here...")
             
-            // Print retrieved JSON
-            print("")
-            print("====== the retrieved JSON is as follows ======")
-            print(json)
             
-            // Now we can parse this...
-            print("")
-            print("Now, add your parsing code here...")
+            
+            
             
             // Now we can update the UI
             // (must be done asynchronously)
@@ -78,8 +82,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         var urlString : String = "https://api.nasa.gov/planetary/earth/imagery?"
         
-        urlString += ("lon=" + long + "&" + "lat=" + long + "&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
+        urlString += ("lon=" + String(longDouble))
         
+        urlString += ("&lat=" + String(latDouble))
+       
+        urlString += ("&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
         
         
         
@@ -93,17 +100,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             //
             // data - contains the data from the request
             // response - contains the HTTP response code(s)
-            // error - contains any error messages, if applicable
-            
-            print("")
-            print("====== data from the request follows ======")
-            print(data)
-            print("")
-            print("====== response codes from the request follows ======")
-            print(response)
-            print("")
-            print("====== errors from the request follows ======")
-            print(error)
+//            // error - contains any error messages, if applicable
+//            
+//            print("")
+//            print("====== data from the request follows ======")
+//            print(data)
+//            print("")
+//            print("====== response codes from the request follows ======")
+//            print(response)
+//            print("")
+//            print("====== errors from the request follows ======")
+//            print(error)
             
             // Cast the NSURLResponse object into an NSHTTPURLResponse objecct
             if let r = response as? NSHTTPURLResponse {

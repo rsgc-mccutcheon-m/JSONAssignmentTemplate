@@ -38,3 +38,15 @@
 	</array>
 </dict>
 </plist>
+
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>app.toronto.ca</key>
+        <dict>
+            <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+            <true/>
+        </dict>
+    </dict>
+</dict>
