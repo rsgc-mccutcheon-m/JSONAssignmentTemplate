@@ -52,34 +52,39 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Hh-fa-nuo">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hed-wF-MAI">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jfe-Ff-KJa">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="hed-wF-MAI" secondAttribute="height" multiplier="300:197" id="ra8-Cl-2bs"/>
-                                                    <constraint firstAttribute="height" constant="394" id="wPT-8w-HC5"/>
-                                                </constraints>
-                                            </imageView>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KTo-Ia-nrT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4ql-kI-UY5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sfY-Yb-8Jn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VBt-Bg-Xad">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                                                                <subviews>
+                                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hed-wF-MAI">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="394"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="hed-wF-MAI" secondAttribute="height" multiplier="300:197" id="ra8-Cl-2bs"/>
+                                                                                            <constraint firstAttribute="height" constant="394" id="wPT-8w-HC5"/>
+                                                                                        </constraints>
+                                                                                    </imageView>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="3Hh-fa-nuo" secondAttribute="leading" id="19T-jb-Uox"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="centerY" secondItem="3Hh-fa-nuo" secondAttribute="centerY" id="2Fl-yP-JKD"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="3Hh-fa-nuo" secondAttribute="leading" id="E7T-Fm-luJ"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="3Hh-fa-nuo" secondAttribute="leading" id="GjS-Ki-0Dg"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="bottom" secondItem="3Hh-fa-nuo" secondAttribute="bottomMargin" id="I3F-xB-kvb"/>
-                                            <constraint firstAttribute="trailing" secondItem="hed-wF-MAI" secondAttribute="trailing" id="IkR-mF-NSa"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="3Hh-fa-nuo" secondAttribute="top" id="ND7-v8-vfY"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="3Hh-fa-nuo" secondAttribute="top" id="QXx-Ym-FBY"/>
-                                            <constraint firstAttribute="trailing" secondItem="hed-wF-MAI" secondAttribute="trailing" id="UnX-ZV-dEc"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="trailing" secondItem="3Hh-fa-nuo" secondAttribute="trailingMargin" id="W1J-hj-FgF"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="3Hh-fa-nuo" secondAttribute="topMargin" id="Wfr-99-UIX"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="3Hh-fa-nuo" secondAttribute="top" id="XHs-hf-pnK"/>
-                                            <constraint firstAttribute="bottom" secondItem="hed-wF-MAI" secondAttribute="bottom" id="gr9-uX-UEH"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="3Hh-fa-nuo" secondAttribute="leadingMargin" id="nrm-uD-LRV"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="3Hh-fa-nuo" secondAttribute="leading" id="qsB-q7-YjH"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="3Hh-fa-nuo" secondAttribute="top" id="sPz-wk-0mr"/>
-                                            <constraint firstItem="hed-wF-MAI" firstAttribute="centerX" secondItem="3Hh-fa-nuo" secondAttribute="centerX" id="tov-iR-Acr"/>
-                                            <constraint firstAttribute="bottom" secondItem="hed-wF-MAI" secondAttribute="bottom" id="w9x-Em-N8V"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>

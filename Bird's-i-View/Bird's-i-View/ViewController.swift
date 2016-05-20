@@ -66,11 +66,6 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
                 
             }
             
-            
-            
-            // Now we can update the UI
-            // (must be done asynchronously)
-            
         } catch let error as NSError {
             print ("Failed to load: \(error.localizedDescription)")
         }
@@ -96,28 +91,10 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         urlString += ("&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
         
         
-        
         // This is where we'd process the JSON retrieved
         let myCompletionHandler : (NSData?, NSURLResponse?, NSError?) -> Void = {
             
             (data, response, error) in
-            
-            // This is the code run when the network request completes
-            // When the request completes:
-            //
-            // data - contains the data from the request
-            // response - contains the HTTP response code(s)
-            //            // error - contains any error messages, if applicable
-            //
-            //            print("")
-            //            print("====== data from the request follows ======")
-            //            print(data)
-            //            print("")
-            //            print("====== response codes from the request follows ======")
-            //            print(response)
-            //            print("")
-            //            print("====== errors from the request follows ======")
-            //            print(error)
             
             // Cast the NSURLResponse object into an NSHTTPURLResponse objecct
             if let r = response as? NSHTTPURLResponse {
@@ -139,13 +116,12 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         }
         
         // Define a URL to retrieve a JSON file from
-        let address : String = urlString
         
         // Try to make a URL request object
-        if let url = NSURL(string: address) {
+        if let url = NSURL(string: urlString) {
             
             // We have an valid URL to work with
-            print(url)
+            //print(url)
             
             // Now we create a URL request object
             let urlRequest = NSURLRequest(URL: url)
