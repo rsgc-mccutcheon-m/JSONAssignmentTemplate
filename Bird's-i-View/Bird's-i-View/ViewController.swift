@@ -23,6 +23,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var latDouble : Double = 0.0
     var longDouble : Double = 0.0
     
+    var imgUrl : NSURL
+    
     
     @IBOutlet var GPS : UILabel!
     @IBOutlet var date : UILabel!
@@ -54,7 +56,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //            print("")
 //            print("Now, add your parsing code here...")
             
-            
+            if let jsonElements = json as? [String : String] {
+                
+               var numElements = jsonElements.count
+                
+                imgUrl = jsonElements[ "url" ]
+                
+            }
             
             
             
