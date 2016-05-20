@@ -13,8 +13,8 @@ import CoreLocation
 
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
-   
+class ViewController : UIViewController, CLLocationManagerDelegate {
+    
     
     let manager : CLLocationManager = CLLocationManager()
     
@@ -23,7 +23,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var latDouble : Double = 0.0
     var longDouble : Double = 0.0
     
-    var imgUrl : NSURL
+    
+    var imgURL : NSURL = NSURL()
     
     
     @IBOutlet var GPS : UILabel!
@@ -60,7 +61,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                var numElements = jsonElements.count
                 
-                imgUrl = jsonElements[ "url" ]
+                if let imgURL = NSURL(string: jsonElements[ "url" ]!) {
+                    
+                    
+                    
+                }
+                
+              
                 
             }
             
