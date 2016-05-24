@@ -485,6 +485,7 @@
 				4D9E03571CEA56E200F9531D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D9E03581CEA56E200F9531D /* Build configuration list for PBXNativeTarget "Bird's-i-ViewTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				4D9E035A1CEA56E200F9531D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D9E035B1CEA56E200F9531D /* Build configuration list for PBXNativeTarget "Bird's-i-ViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				4D9E035D1CEA56E200F9531D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

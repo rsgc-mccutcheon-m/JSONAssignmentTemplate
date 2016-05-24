@@ -11,8 +11,6 @@ import Foundation
 import CoreLocation
 
 
-
-
 class ViewController : UIViewController, CLLocationManagerDelegate {
     
     
@@ -43,26 +41,38 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
             
             let json = try NSJSONSerialization.JSONObjectWithData(theData, options: NSJSONReadingOptions.AllowFragments) as! AnyObject
             //
-            //            print("Now, add your parsing code here...")
+                    print("Now, add your parsing code here...")
             
             if let jsonElements = json as? [String : String] {
+                
+                print(jsonElements)
                 
                 var numElements = jsonElements.count
                 
                 if let imgURL = NSURL(string: jsonElements[ "url" ]!) {
                     
+                    print(imgURL)
+                    
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                         
                         let imgData = NSData(contentsOfURL: imgURL)
                         
+                        print(imgData)
+                        
                         dispatch_async(dispatch_get_main_queue(), {
                             self.Image.image = UIImage(data: imgData!)
+                            
+                            
+                            var gpsText : String = ("lon=" + String(self.longDouble))
+                            
+                            gpsText += ("&lat=" + String(self.latDouble))
+                            
+                            self.GPS.text = gpsText
                             
                         });
                     }
                     
                 }
-                
                 
             }
             
