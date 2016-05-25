@@ -38,12 +38,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Recent Flyover:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-4Q-tZ6">
-                                <rect key="frame" x="16" y="93" width="245" height="37"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aquiring..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-Nt-TaQ">
                                 <rect key="frame" x="156" y="60" width="93" height="25"/>
                                 <constraints>
@@ -70,16 +64,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aquiring..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzh-lF-U3K">
-                                <rect key="frame" x="182" y="96" width="93" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Lka-a1-kmw"/>
-                                    <constraint firstAttribute="width" constant="93" id="t43-Pu-5zr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LandSat 8 Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-iY-7O9">
                                 <rect key="frame" x="95" y="138" width="130" height="21"/>
                                 <constraints>
@@ -92,31 +76,24 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gcl-4Q-tZ6" secondAttribute="trailing" constant="43" id="0Dd-kj-oME"/>
-                            <constraint firstItem="Mzh-lF-U3K" firstAttribute="firstBaseline" secondItem="gcl-4Q-tZ6" secondAttribute="firstBaseline" id="0cN-Aw-qyQ"/>
                             <constraint firstItem="hed-wF-MAI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="1If-uQ-hzy"/>
                             <constraint firstItem="Tku-6i-lJI" firstAttribute="trailing" secondItem="Xra-Nt-TaQ" secondAttribute="trailing" id="1ac-al-DmN"/>
                             <constraint firstItem="Tku-6i-lJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="313-3o-NG1"/>
-                            <constraint firstItem="gcl-4Q-tZ6" firstAttribute="leading" secondItem="4GQ-0R-jfl" secondAttribute="leading" id="4bu-TX-H94"/>
                             <constraint firstAttribute="trailing" secondItem="hed-wF-MAI" secondAttribute="trailing" id="8FB-ix-Zd1"/>
                             <constraint firstItem="4GQ-0R-jfl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dxg-xL-tNM"/>
                             <constraint firstItem="Tku-6i-lJI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kt8-bj-3sb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4GQ-0R-jfl" secondAttribute="trailing" constant="82" id="dno-pd-FOx"/>
                             <constraint firstItem="hed-wF-MAI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="itb-T3-UTs"/>
                             <constraint firstItem="hed-wF-MAI" firstAttribute="top" secondItem="ddH-iY-7O9" secondAttribute="bottom" constant="8" symbolic="YES" id="jIc-T2-47X"/>
-                            <constraint firstItem="ddH-iY-7O9" firstAttribute="top" secondItem="gcl-4Q-tZ6" secondAttribute="bottom" constant="8" symbolic="YES" id="jcv-hD-Wa7"/>
                             <constraint firstItem="ddH-iY-7O9" firstAttribute="centerX" secondItem="Tku-6i-lJI" secondAttribute="centerX" id="kwi-tR-Zwh"/>
                             <constraint firstItem="4GQ-0R-jfl" firstAttribute="top" secondItem="Tku-6i-lJI" secondAttribute="bottom" constant="8" symbolic="YES" id="qVs-sb-xU3"/>
                             <constraint firstItem="Xra-Nt-TaQ" firstAttribute="baseline" secondItem="4GQ-0R-jfl" secondAttribute="baseline" id="sAc-MQ-S1N"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mzh-lF-U3K" secondAttribute="trailing" constant="29" id="smO-CD-VVT"/>
-                            <constraint firstItem="gcl-4Q-tZ6" firstAttribute="top" secondItem="4GQ-0R-jfl" secondAttribute="bottom" constant="8" symbolic="YES" id="w4s-bE-gY7"/>
                             <constraint firstItem="4GQ-0R-jfl" firstAttribute="firstBaseline" secondItem="Xra-Nt-TaQ" secondAttribute="firstBaseline" id="yyd-9b-VlT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="GPS" destination="Xra-Nt-TaQ" id="yDF-YH-adI"/>
                         <outlet property="Image" destination="hed-wF-MAI" id="Q02-V9-Wha"/>
-                        <outlet property="date" destination="Mzh-lF-U3K" id="m1B-6n-nfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

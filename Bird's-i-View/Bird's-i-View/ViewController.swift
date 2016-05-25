@@ -9,15 +9,15 @@
 import UIKit
 import Foundation
 import CoreLocation
-
+import MapKit
 
 class ViewController : UIViewController, CLLocationManagerDelegate {
     
     
     let manager : CLLocationManager = CLLocationManager()
     
-    var lat : String = ""
-    var long : String = ""
+    var latitude : String = ""
+    var longitude : String = ""
     var latDouble : Double = 0.0
     var longDouble : Double = 0.0
     
@@ -26,7 +26,6 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
     
     
     @IBOutlet var GPS : UILabel!
-    @IBOutlet var date : UILabel!
     
     @IBOutlet weak var Image: UIImageView!
     
@@ -56,6 +55,7 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
                     
                     print(imgURL)
                     
+                    
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                         
                         let imgData = NSData(contentsOfURL: imgURL)
@@ -66,17 +66,19 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
                             self.Image.image = UIImage(data: imgData!)
                             
                             
-                            var gpsText : String = ("lon=" + String(self.longDouble))
+                            var gpsText : String = ("lon=" + self.longitude)
                             
-                            gpsText += ("&lat=" + String(self.latDouble))
+                            gpsText += ("&lat=" + self.latitude)
                             
                             self.GPS.text = gpsText
+                            
                             
                         });
                     }
                     
-                }
                 
+            }
+            
             }
             
         } catch let error as NSError {
@@ -97,9 +99,9 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         
         var urlString : String = "https://api.nasa.gov/planetary/earth/imagery?"
         
-        urlString += ("lon=" + String(longDouble))
+        urlString += ("lon=" + longitude)
         
-        urlString += ("&lat=" + String(latDouble))
+        urlString += ("&lat=" + latitude)
         
         urlString += ("&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
         
@@ -169,8 +171,21 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         print("viewDidLoad")
         
-        self.getMyJSON()
+        //get that info pleees
+        //self.getMyJSON()
         
+        
+        //Location services setup
+
+        manager.delegate = self
+       
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+      
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            manager.requestWhenInUseAuthorization()
+        }
+        
+        manager.startUpdatingLocation()
         
     }
     
@@ -193,8 +208,8 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         let latestLocation = locations.last
         
         // Format the current location as strings with four decimal places of accuracy
-        lat = String(format: "%.4f", latestLocation!.coordinate.latitude)
-        long = String(format: "%.4f", latestLocation!.coordinate.longitude)
+        latitude = String(format: "%.4f", latestLocation!.coordinate.latitude)
+        longitude = String(format: "%.4f", latestLocation!.coordinate.longitude)
         
         // Save the current location as a Double
         latDouble = Double(latestLocation!.coordinate.latitude)
@@ -205,7 +220,7 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         print("Latitude: \(latDouble)")
         print("Longitude: \(longDouble)")
         
-        // Now actually retrieve the cooling centre data
+        // Now actually retrieve the Image
         getMyJSON()
     }
     
