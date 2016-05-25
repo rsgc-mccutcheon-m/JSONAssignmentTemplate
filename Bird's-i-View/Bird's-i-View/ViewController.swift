@@ -34,6 +34,9 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
     // If data is successfully retrieved from the server, we can parse it here
     func parseMyJSON(theData : NSData) {
         
+        
+        print(theData)
+        
         // De-serializing JSON can throw errors, so should be inside a do-catch structure
         do {
             
@@ -100,6 +103,9 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         
         urlString += ("&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
         
+        //urlString = ("https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&cloud_score=False&api_key=HP7NhvAtAFV4AiPhn1VViToDCcGCco2Qb8kJGcjA")
+        
+        print(urlString)
         
         // This is where we'd process the JSON retrieved
         let myCompletionHandler : (NSData?, NSURLResponse?, NSError?) -> Void = {
@@ -131,7 +137,7 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         if let url = NSURL(string: urlString) {
             
             // We have an valid URL to work with
-            //print(url)
+            print(url)
             
             // Now we create a URL request object
             let urlRequest = NSURLRequest(URL: url)
@@ -161,8 +167,9 @@ class ViewController : UIViewController, CLLocationManagerDelegate {
         // Sub-classes of UIViewController must invoke the superclass method viewDidLoad in their
         // own version of viewDidLoad()
         super.viewDidLoad()
+        print("viewDidLoad")
         
-        
+        self.getMyJSON()
         
         
     }
